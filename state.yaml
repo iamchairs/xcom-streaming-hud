@@ -1,0 +1,948 @@
+state: battle
+selectedUnit: Pandarvis
+units:
+  - name: Janusz Wisniewski
+    id: 70
+    armorType: STR_NONE_UC
+    timeUnits: 53
+    energy: 43
+    health: 33
+    baseHealth: 33
+    morale: 50
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Mathias Andresen
+    id: 75
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 0
+    energy: 69
+    health: 28
+    baseHealth: 28
+    morale: 18
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Gusztav Annus
+    id: 76
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 0
+    energy: 50
+    health: 35
+    baseHealth: 35
+    morale: 15
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Isabel Nordin
+    id: 77
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 60
+    energy: 49
+    health: 33
+    baseHealth: 33
+    morale: 18
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Ikaroa taui
+    id: 79
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 57
+    energy: 59
+    health: 32
+    baseHealth: 32
+    morale: 6
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Hans Schneider
+    id: 80
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 59
+    energy: 70
+    health: 35
+    baseHealth: 35
+    morale: 19
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Jadwiga Nowakowska
+    id: 44
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 56
+    energy: 52
+    health: 37
+    baseHealth: 37
+    morale: 73
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Robert Banica
+    id: 45
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 0
+    energy: 29
+    health: 33
+    baseHealth: 33
+    morale: 15
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Virgil Gallagher
+    id: 46
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 53
+    energy: 49
+    health: 32
+    baseHealth: 32
+    morale: 19
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Alex Vajda
+    id: 87
+    armorType: STR_NONE_UC
+    timeUnits: 56
+    energy: 48
+    health: 0
+    baseHealth: 27
+    morale: 0
+    fatalWounds: 3
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 1
+    rankInt: 0
+  - name: Lowie Dubois
+    id: 88
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 54
+    energy: 34
+    health: 0
+    baseHealth: 28
+    morale: 0
+    fatalWounds: 3
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 1
+    rankInt: 0
+  - name: Geraldine Fournier
+    id: 89
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 55
+    energy: 43
+    health: 0
+    baseHealth: 29
+    morale: 31
+    fatalWounds: 1
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 1
+    rankInt: 0
+  - name: Tiago Sobral
+    id: 90
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 60
+    energy: 56
+    health: 0
+    baseHealth: 31
+    morale: 3
+    fatalWounds: 1
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 1
+    rankInt: 0
+  - name: Alma Sandoval
+    id: 91
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 53
+    energy: 69
+    health: 35
+    baseHealth: 35
+    morale: 24
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Padraig Reilly
+    id: 92
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 50
+    energy: 21
+    health: 27
+    baseHealth: 27
+    morale: 64
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Ana Santa Cruz
+    id: 93
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 57
+    energy: 51
+    health: 39
+    baseHealth: 39
+    morale: 24
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Bjorn Licht
+    id: 97
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 59
+    energy: 47
+    health: 0
+    baseHealth: 28
+    morale: 19
+    fatalWounds: 1
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 1
+    rankInt: 0
+  - name: Ryszard Mazur
+    id: 94
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 58
+    energy: 48
+    health: 38
+    baseHealth: 38
+    morale: 7
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Jun-young Sam
+    id: 95
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 57
+    energy: 44
+    health: 0
+    baseHealth: 40
+    morale: 6
+    fatalWounds: 4
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 1
+    rankInt: 0
+  - name: Nazan Tezcan
+    id: 96
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 0
+    energy: 51
+    health: 36
+    baseHealth: 36
+    morale: 22
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Peter Szabo
+    id: 82
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 51
+    energy: 53
+    health: 28
+    baseHealth: 28
+    morale: 19
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Roisin Dunn
+    id: 83
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 0
+    energy: 58
+    health: 36
+    baseHealth: 36
+    morale: 30
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Guadalupe Underwood
+    id: 84
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 0
+    energy: 63
+    health: 36
+    baseHealth: 36
+    morale: 15
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Inger Olofsson
+    id: 85
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 58
+    energy: 64
+    health: 26
+    baseHealth: 26
+    morale: 18
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Henk de Haan
+    id: 86
+    armorType: STR_PLASTIC_AQUA_ARMOR_UC
+    timeUnits: 52
+    energy: 63
+    health: 28
+    baseHealth: 28
+    morale: 70
+    fatalWounds: 0
+    fire: 0
+    rank: STR_ROOKIE
+    killedBy: 0
+    rankInt: 0
+  - name: Lucas Suarez
+    id: 69
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 58
+    energy: 55
+    health: 0
+    baseHealth: 37
+    morale: 51
+    fatalWounds: 3
+    fire: 0
+    rank: STR_SERGEANT
+    killedBy: 0
+    rankInt: 2
+  - name: Severin Rosenkrantz
+    id: 71
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 54
+    energy: 56
+    health: 38
+    baseHealth: 38
+    morale: 3
+    fatalWounds: 0
+    fire: 0
+    rank: STR_SERGEANT
+    killedBy: 0
+    rankInt: 2
+  - name: Mustafa Akturan
+    id: 72
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 54
+    energy: 54
+    health: 37
+    baseHealth: 37
+    morale: 15
+    fatalWounds: 0
+    fire: 0
+    rank: STR_SERGEANT
+    killedBy: 0
+    rankInt: 2
+  - name: Nikola Andreev
+    id: 78
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 59
+    energy: 45
+    health: 0
+    baseHealth: 31
+    morale: 20
+    fatalWounds: 3
+    fire: 0
+    rank: STR_SERGEANT
+    killedBy: 1
+    rankInt: 2
+  - name: Anders Lund
+    id: 81
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 56
+    energy: 58
+    health: 6
+    baseHealth: 39
+    morale: 39
+    fatalWounds: 1
+    fire: 0
+    rank: STR_SERGEANT
+    killedBy: 0
+    rankInt: 2
+  - name: Fabio Avila
+    id: 73
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 55
+    energy: 67
+    health: 0
+    baseHealth: 36
+    morale: 29
+    fatalWounds: 2
+    fire: 0
+    rank: STR_CAPTAIN
+    killedBy: 1
+    rankInt: 3
+  - name: Linus Nordin
+    id: 74
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 55
+    energy: 63
+    health: 0
+    baseHealth: 43
+    morale: 0
+    fatalWounds: 5
+    fire: 0
+    rank: STR_CAPTAIN
+    killedBy: 1
+    rankInt: 3
+  - name: Albina Alekseeva
+    id: 67
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 56
+    energy: 55
+    health: 0
+    baseHealth: 26
+    morale: 13
+    fatalWounds: 3
+    fire: 0
+    rank: STR_CAPTAIN
+    killedBy: 1
+    rankInt: 3
+  - name: Lilleth Watson
+    id: 54
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 60
+    energy: 58
+    health: 36
+    baseHealth: 36
+    morale: 70
+    fatalWounds: 0
+    fire: 0
+    rank: STR_COLONEL
+    killedBy: 0
+    rankInt: 4
+  - name: Pandarvis
+    id: 1
+    armorType: STR_ION_ARMOR_UC
+    timeUnits: 0
+    energy: 82
+    health: 10
+    baseHealth: 55
+    morale: 15
+    fatalWounds: 0
+    fire: 0
+    rank: STR_COMMANDER
+    killedBy: 0
+    rankInt: 5
+difficulty: 4
+funds: 15322016
+warned: false
+month: 12
+soldiers:
+  - name: Orla Fitzpatrick
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Stian Olsen
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Marc Poulsen
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Matilde Gallo
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Zhong Hui-chao
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Wei Hui-chao
+    rank: STR_SQUADDIE
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Els Mertens
+    rank: STR_SQUADDIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Onuwachi Itsifanus
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Masaharu Hashimoto
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Sarah Duffy
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Aatu Peltonen
+    rank: STR_SERGEANT
+    kills: 5
+    missions: 4
+    dead: true
+  - name: Heketoro Hemara
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Octavio Martinez
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Alban Perrot
+    rank: STR_SQUADDIE
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Kathleen Collins
+    rank: STR_SQUADDIE
+    kills: 4
+    missions: 7
+    dead: true
+  - name: Pawel Kowalczyk
+    rank: STR_COLONEL
+    kills: 4
+    missions: 8
+    dead: true
+  - name: Donal Lynch
+    rank: STR_CAPTAIN
+    kills: 5
+    missions: 6
+    dead: true
+  - name: Mattia Romano
+    rank: STR_SERGEANT
+    kills: 10
+    missions: 8
+    dead: true
+  - name: David Jacobs
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Pal Flemmen
+    rank: STR_CAPTAIN
+    kills: 5
+    missions: 9
+    dead: true
+  - name: Viktoriya Sokolova
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Ali Qureshi
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Hadhi Shaheen
+    rank: STR_ROOKIE
+    kills: 4
+    missions: 3
+    dead: true
+  - name: Andrew Clarke
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Wouter Claes
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Granie Muya
+    rank: STR_SERGEANT
+    kills: 2
+    missions: 4
+    dead: true
+  - name: Commanderroot
+    rank: STR_CAPTAIN
+    kills: 9
+    missions: 12
+    dead: true
+  - name: Pernille Dahl
+    rank: STR_ROOKIE
+    kills: 2
+    missions: 1
+    dead: true
+  - name: Theresa Fletcher
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 4
+    dead: true
+  - name: Davy_gaming
+    rank: STR_SERGEANT
+    kills: 9
+    missions: 12
+    dead: true
+  - name: Abeke Aimeihi
+    rank: STR_SERGEANT
+    kills: 8
+    missions: 5
+    dead: true
+  - name: Andrey Kuznetsov
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Abu Khouri
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Rafael Queiros
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Davy_gaming II
+    rank: STR_SERGEANT
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Ohon Obama
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Shi Deshi
+    rank: STR_ROOKIE
+    kills: 3
+    missions: 1
+    dead: true
+  - name: Barfy
+    rank: STR_COMMANDER
+    kills: 5
+    missions: 13
+    dead: true
+  - name: Min-seo Hak
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Elias Rantanen
+    rank: STR_ROOKIE
+    kills: 2
+    missions: 4
+    dead: true
+  - name: Vratko Rakocz
+    rank: STR_SERGEANT
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Damian Rooney
+    rank: STR_SERGEANT
+    kills: 2
+    missions: 3
+    dead: true
+  - name: Emilien Jacobs
+    rank: STR_SQUADDIE
+    kills: 2
+    missions: 3
+    dead: true
+  - name: Katarzyna Adamczyk
+    rank: STR_SQUADDIE
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Vratko Mojzis
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 4
+    dead: true
+  - name: Filosofiraptor
+    rank: STR_COMMANDER
+    kills: 13
+    missions: 16
+    dead: true
+  - name: pinksalmonz
+    rank: STR_CAPTAIN
+    kills: 11
+    missions: 17
+    dead: true
+  - name: Terezia Noszaly
+    rank: STR_ROOKIE
+    kills: 2
+    missions: 3
+    dead: true
+  - name: Fortunato Juarez
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Soo-jin Yeo
+    rank: STR_CAPTAIN
+    kills: 2
+    missions: 6
+    dead: true
+  - name: Jan Mazur
+    rank: STR_ROOKIE
+    kills: 2
+    missions: 3
+    dead: true
+  - name: Kiril Damyanov
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Kazimierz Zajac
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Dymas Verdanis
+    rank: STR_SERGEANT
+    kills: 2
+    missions: 5
+    dead: true
+  - name: Matej Cernuska
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 5
+    dead: true
+  - name: Hemi Te Papa
+    rank: STR_ROOKIE
+    kills: 5
+    missions: 5
+    dead: true
+  - name: Sten Andersson
+    rank: STR_CAPTAIN
+    kills: 3
+    missions: 7
+    dead: true
+  - name: Hou Wei
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Commanderroot II
+    rank: STR_COMMANDER
+    kills: 21
+    missions: 18
+    dead: true
+  - name: Vasiliy Borisov
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Fadil Hadad
+    rank: STR_CAPTAIN
+    kills: 6
+    missions: 8
+    dead: true
+  - name: Ingrid Olofsson
+    rank: STR_ROOKIE
+    kills: 2
+    missions: 6
+    dead: true
+  - name: Alex Vajda
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: true
+  - name: Geraldine Fournier
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: true
+  - name: Bjorn Licht
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: true
+  - name: Lowie Dubois
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: true
+  - name: Tiago Sobral
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: true
+  - name: Jun-young Sam
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: true
+  - name: Fabio Avila
+    rank: STR_CAPTAIN
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Nikola Andreev
+    rank: STR_SERGEANT
+    kills: 2
+    missions: 3
+    dead: true
+  - name: Albina Alekseeva
+    rank: STR_CAPTAIN
+    kills: 0
+    missions: 5
+    dead: true
+  - name: Linus Nordin
+    rank: STR_CAPTAIN
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Lucas Suarez
+    rank: STR_SERGEANT
+    kills: 2
+    missions: 3
+    dead: true
+  - name: Janusz Wisniewski
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Mathias Andresen
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Gusztav Annus
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Isabel Nordin
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Ikaroa taui
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Hans Schneider
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Jadwiga Nowakowska
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: false
+  - name: Robert Banica
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: false
+  - name: Virgil Gallagher
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: false
+  - name: Alma Sandoval
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Padraig Reilly
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Ana Santa Cruz
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Ryszard Mazur
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Nazan Tezcan
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Peter Szabo
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Roisin Dunn
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: false
+  - name: Guadalupe Underwood
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: false
+  - name: Inger Olofsson
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: false
+  - name: Henk de Haan
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: false
+  - name: Severin Rosenkrantz
+    rank: STR_SERGEANT
+    kills: 5
+    missions: 3
+    dead: false
+  - name: Mustafa Akturan
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 3
+    dead: false
+  - name: Anders Lund
+    rank: STR_SERGEANT
+    kills: 1
+    missions: 3
+    dead: false
+  - name: Lilleth Watson
+    rank: STR_COLONEL
+    kills: 10
+    missions: 8
+    dead: false
+  - name: Pandarvis
+    rank: STR_COMMANDER
+    kills: 20
+    missions: 21
+    dead: false

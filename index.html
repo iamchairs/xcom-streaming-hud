@@ -1,0 +1,580 @@
+<html>
+  <head>
+    <script src="//unpkg.com/twitch-js@latest/dist/twitch-js.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <style>
+
+      .pulse {
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+        transition: all 0.5s ease;
+      }
+
+      ::-webkit-scrollbar { 
+          display: none; 
+      }
+
+      body {
+        padding: 0px;
+        margin: 0px;
+
+        font-family: arial;
+        color: #fff;
+
+        font-size: 10px;
+      }
+
+      #right {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        background-color: #000;
+
+        width: 180px;
+      }
+
+      #timer {
+        font-family: 'Century Gothic';
+        padding: 16px;
+        border-bottom: 1px solid #bbb;
+
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .user-stats_title {
+        font-family: 'Century Gothic';
+        padding: 8px;
+
+        text-align: center;
+        font-size: 12px;
+      }
+
+      #stats {
+
+      }
+
+      .chat-area {
+        overflow: hidden;
+        max-height: calc(100vh - 80px);
+      }
+
+      .chat-message {
+        padding: 16px;
+        line-height: 20px;
+      }
+
+      .chat-message:nth-child(2n) {
+        background-color: #222;
+      }
+
+      .chat-message img {
+        display: none;
+      }
+
+      .chat-user {
+        color: #009dff;
+        font-weight: 700;
+      }
+
+      
+      .chat-message.broadcaster .chat-user {
+        color: #e52a0d;
+      }
+
+      .chat-message.broadcaster img {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 2px;
+      }
+
+      #bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 180px;
+        height: 120px;
+
+        background-color: #000;
+      }
+
+      .unit-badge {
+        float: left;
+        height: 130px;
+        width: 80px;
+        position: relative;
+
+        top: auto;
+
+        padding-top: 10px;
+
+        padding-left: 5px;
+        padding-right: 5px;
+
+        background-color: #000;
+      }
+
+      .unit-badge:nth-child(2n) {
+        background-color: #222;
+      }
+
+      .unit-badge:last-child {
+        border-right: 0px;
+      }
+
+      .unit-badge_content {
+        opacity: 0.8;
+      }
+
+      .unit-badge_rank {
+        position:relative;
+        height: 70px;
+      }
+
+      .unit-badge_rank img {
+        position: absolute;
+      }
+
+      .unit-badge_rank img.rank {
+        image-rendering: pixelated;
+
+        width: 70px;
+        height: 70px;
+      }
+
+      .unit-badge_rank img.death {
+        z-index: 10;
+        opacity: 0;
+
+        width: 70px;
+        height: 70px;
+
+        margin: 0px;
+      }
+
+      .unit-badge.dead .unit-badge_content {
+        opacity: 0.3;
+      }
+
+      .unit-badge.dead img.death {
+        opacity: 1;
+      }
+
+      .unit-badge.selected {
+        bottom: 10px;
+      }
+
+      .unit-badge.selected .unit-badge_content {
+        opacity: 1;
+      }
+
+      .unit-badge.special .unit-badge_name {
+        color: #009dff;
+      }
+
+      .unit-badge.dead .unit-badge_name {
+        top: 100px;
+      }
+
+      .unit-badge_name {
+        height: 20px;
+        width: 100%;
+        line-height: 20px;
+        font-size: 10px;
+
+        text-align: center;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+
+      .unit-badge_icons {
+        width: 100%;
+        right: 0;
+
+        padding-top: 3px;
+
+        text-align: center;
+      }
+
+      .unit-badge_icon {
+        display: inline-block;
+      }
+
+      .unit-badge_icon img {
+        width: 18px;
+        height: 18px;
+      }
+
+      .unit-badge_tab {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 10px;
+        background-color: #009dff;
+      }
+
+      div .stats_row:nth-child(2n) {
+        background-color: #222;
+        clear: both;
+        overflow: auto;
+      }
+
+      .stats_key {
+        font-weight: 700;
+        float: left;
+
+        padding: 8px;
+      }
+
+      .stats_value {
+        float: right;
+        padding: 8px;
+      }
+
+      #stats {
+        border-bottom: 1px solid #bbb;
+      }
+
+      #user-stats_content .stats_key {
+        color: #009dff;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function padLeft(n) {
+        let ns = ''+n;
+        if(ns.length < 2) {
+          return `0${ns}`;
+        }
+
+        return ns;
+      }
+
+      const client = new TwitchJS.client({
+        connection: {
+          reconnect: true,
+          secure: true
+        },
+        channels: ['#iamchairs']
+      });
+
+      // Add listeners for events, e.g. a chat event.
+      client.on('chat', (channel, userstate, message, self) => {
+        if (userstate['message-type'] !== 'chat') {
+          console.log('unknown message type:');
+          console.log(userstate, message);
+          return;
+        }
+
+        /*chat_area.innerHTML +=`
+          <div class="chat-message ${userstate.badges && userstate.badges.broadcaster ? 'broadcaster' : ''}">
+            <span class="chat-user"><img src="https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1" /> ${userstate['display-name']}:</span>
+            <span class="chat-message-body">${message}</span>
+          </div>
+        `
+
+        chat_area.scrollTop = 1e10;*/
+      });
+      
+      let start = moment().subtract(0, 'm')._d.getTime();
+      let miliHours = 60 * 60 * 1000;
+      let miliMinutes = 60 * 1000;
+      let miliSeconds = 1000;
+
+      setInterval(() => {
+        let now = new Date().getTime();
+        let diff = now - start;
+
+        let hours = Math.floor(diff / miliHours);
+        let minutes = Math.floor(diff % miliHours / miliMinutes);
+        let seconds = Math.floor(diff % miliHours % miliMinutes / miliSeconds);
+        let mili = Math.round((diff % miliHours % miliMinutes % miliSeconds)/10);
+
+        timer.innerHTML = `Session Timer ${padLeft(hours)}:${padLeft(minutes)}:${padLeft(seconds)}.${padLeft(mili)}`;
+      }, 10);
+
+      client.connect();
+
+      ///
+
+      let selectedUnit = null;
+
+      function addUnit(unit) {
+        let id = unit.name.replace(/ /g, '_');
+        let unitHtml = `
+<div id="${id}" class="${/ /.test(unit.name) ? '' : 'special'} unit-badge">
+  <div class="unit-badge_content">
+    <div class="unit-badge_rank">
+      <img class="rank" />
+      <!--<img class="death" src="/assets/cross.png" />-->
+    </div>
+    <div class="unit-badge_icons">
+      <div class="unit-badge_icon">
+        <img class="armor" src="" />
+      </div>
+      <div class="unit-badge_icon">
+        <img class="health" src="" />
+      </div>
+      <div class="unit-badge_icon">
+        <img class="morale" src="" />
+      </div>
+    </div>
+    <div class="unit-badge_name">${unit.name}</div>
+    <div class="unit-badge_tab"></div>
+  </div>
+</div>
+        `;
+        document.getElementById('bottom').innerHTML += unitHtml;
+      }
+
+      function updateUnit(unit) {
+        let id = unit.name.replace(/ /g, '_');
+        let unitDom = document.getElementById(id);
+
+        if(!unitDom) {
+          addUnit(unit);
+          updateUnit(unit);
+          return;
+        }
+
+        if(unit.name === selectedUnit) {
+          unitDom.classList.add('selected');
+        } else {
+          unitDom.classList.remove('selected');
+        }
+
+        let rankImg = unitDom.querySelector('img.rank');
+        rankImg.setAttribute('src', `/assets/rank_${unit.rankInt}.png`);
+
+        let armorImg = unitDom.querySelector('img.armor');
+        let armorIcon = 'armor_3';
+        if(unit.armorType === 'STR_ION_ARMOR_UC') {
+          armorIcon = 'armor_2';
+        } else if (unit.armorType === 'STR_PLASTIC_AQUA_ARMOR_UC') {
+          armorIcon = 'armor_1';
+        } else if(unit.armorType === 'STR_NONE_UC') {
+          armorIcon = 'armor_0';
+        }
+        armorImg.setAttribute('src', `/assets/${armorIcon}.png`);
+
+        let healthImg = unitDom.querySelector('img.health');
+        let healthIcon = 'heart';
+        let healthClass = '';
+        if(unit.health < (unit.baseHealth/2)) {
+          healthIcon = 'heart-low';
+          healthClass = 'pulse';
+        } else if(unit.health < unit.baseHealth) {
+          healthIcon = 'heart-mid';
+        }
+        if(unit.fatalWounds > 0) {
+          healthIcon = 'critical';
+          healthClass = 'pulse';
+        }
+        if(unit.health <= 0) {
+          unitDom.classList.add('dead');
+          healthIcon = 'death';
+          healthClass = '';
+        }
+        if(healthClass) {
+          healthImg.classList.add(healthClass);          
+        }
+        healthImg.setAttribute('src', `/assets/${healthIcon}.svg`);
+
+        let moraleImg = unitDom.querySelector('img.morale');
+        let moraleIcon = 'happy';
+        if(unit.morale < 10) {
+          moraleIcon = 'panic';
+        } else if (unit.morale < 30) {
+          moraleIcon = 'upset';
+        } else if (unit.morale < 70) {
+          moraleIcon = 'ok';
+        }
+        moraleImg.setAttribute('src', `/assets/${moraleIcon}.svg`);
+      }
+
+      /*function loadStateFromHttp() {
+        fetch('/state.yaml', {
+          method: 'GET'
+        }).then((res) => {
+          res.text().then((txt) => {
+            if(!txt) return;
+            
+            let doc = jsyaml.load(txt);
+            if(!doc) return;
+
+            localStorage.setItem('state', JSON.stringify(doc));
+
+            processState(doc);
+          }).then(() => {
+            setTimeout(() => {
+              loadStateFromHttp();
+            }, 10);
+          }).catch(() => {
+            setTimeout(() => {
+              loadStateFromHttp();
+            }, 10);
+          });
+        });
+      }
+
+      function loadStateFromLocalStorage() {
+        let state = localStorage.getItem('state');
+        if(state) {
+          try {
+            let doc = JSON.parse(state);
+            processState(doc);
+          } catch(e) {}
+        }
+
+        setTimeout(() => {
+          loadStateFromLocalStorage();
+        }, 10);
+      }*/
+
+      var socket = io();
+      socket.on('broadcast', function(msg){
+        if(msg) {
+          processState(msg);
+        }
+      });
+          
+
+      function processState(doc) {
+        if(doc.state === 'battle') {
+          let units = doc.units.reverse().splice(0,21);
+          selectedUnit = doc.selectedUnit;
+
+          for(let unit of units) {
+            //if(!/ /.test(unit.name)) {
+              updateUnit(unit);
+            //}
+          }
+        } else if(doc.state === 'geo') {
+          document.getElementById('bottom').innerHTML = '';
+        } else {
+          // document.getElementById('bottom').innerHTML = '';
+        }
+
+        document.getElementById('difficulty').innerHTML = [
+          'Beginner',
+          'Experienced',
+          'Veteran',
+          'Genius',
+          'Superhuman'
+        ][doc.difficulty];
+
+        document.getElementById('month').innerHTML = doc.month;
+
+        document.getElementById('warned').innerHTML = doc.warned ? 'Yes' : 'No';
+
+        document.getElementById('funds').innerHTML = '$' + new Intl.NumberFormat().format(doc.funds);
+
+        let soldiersMap = {};
+        doc.soldiers.forEach((s) => {
+          if(/ /.test(s.name)) return;
+
+          if(!(s.name in soldiersMap)) {
+            soldiersMap[s.name] = s;
+            soldiersMap[s.name].deaths = s.dead ? 1 : 0;
+          } else {
+            let soldiersObj = soldiersMap[s.name];
+            soldiersObj.missions += s.missions;
+            soldiersObj.kills += s.kills;
+            soldiersObj.deaths += s.dead ? 1 : 0;
+          }
+        });
+
+        let sorted = Object.values(soldiersMap).sort((a, b) => {
+          let aval = (a.missions + a.kills + a.deaths);
+          let bval = (b.missions + b.kills + b.deaths);
+
+          if(bval > aval) {
+            return 1;
+          } else if(bval < aval) {
+            return -1;
+          }
+
+          return 0;
+        });
+
+        let userStatsContent = document.getElementById('user-stats_content');
+        userStatsContent.innerHTML = '';
+
+        for(var i = 0; i < 6; i++) {
+          sorted.forEach((s) => {
+          userStatsContent.innerHTML += `
+<div class="stats_row">
+  <div class="stats_key">${s.name}</div>
+  <div class="stats_value">(${s.missions} / ${s.kills} / ${s.deaths})</div>
+</div>
+          `;
+        });
+        }
+        
+      }
+    </script>
+
+    <div id="right">
+      <div id="timer"></div>
+      <div id="stats">
+
+        <div class="stats_row">
+          <div class="stats_key">Difficulty</div>
+          <div id="difficulty" class="stats_value"></div>
+        </div>
+
+        <div class="stats_row">
+          <div class="stats_key">Month</div>
+          <div id="month" class="stats_value"></div>
+        </div>
+
+        <div class="stats_row">
+          <div class="stats_key">Warned</div>
+          <div id="warned" class="stats_value"></div>
+        </div>
+
+        <div class="stats_row">
+          <div class="stats_key">Funds</div>
+          <div id="funds" class="stats_value"></div>
+        </div>
+
+      </div>
+      
+      <div class="user-stats_title">Champions</div>
+
+      <div class="user-stats">
+        <div class="stats_row">
+          <div class="stats_key">Name</div>
+          <div class="stats_value">(missions / kills / deaths)</div>
+        </div>
+        <div id="user-stats_content"></div>
+      </div>
+      <div id="chat_area" class="chat-area"></div>
+    </div>
+
+    <div id="bottom">
+
+    </div>
+
+  </body>
+</html>
