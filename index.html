@@ -19,8 +19,11 @@
       }
 
       * {
+        font-family: 'Century Gothic';
         box-sizing: border-box;
         transition: all 0.5s ease;
+        font-smooth: never;
+        -webkit-font-smoothing : none;
       }
 
       ::-webkit-scrollbar { 
@@ -122,7 +125,7 @@
 
         top: auto;
 
-        padding-top: 10px;
+        padding-top: 6px;
 
         padding-left: 5px;
         padding-right: 5px;
@@ -131,7 +134,7 @@
       }
 
       .unit-badge:nth-child(2n) {
-        background-color: #222;
+        /*background-color: #222;*/
       }
 
       .unit-badge:last-child {
@@ -139,7 +142,7 @@
       }
 
       .unit-badge_content {
-        opacity: 0.8;
+        opacity: 1;
       }
 
       .unit-badge_rank {
@@ -379,24 +382,26 @@
 
         let healthImg = unitDom.querySelector('img.health');
         let healthIcon = 'heart';
-        let healthClass = '';
+        let healthCritical = false;
         if(unit.health < (unit.baseHealth/2)) {
           healthIcon = 'heart-low';
-          healthClass = 'pulse';
+          healthCritical = true;
         } else if(unit.health < unit.baseHealth) {
           healthIcon = 'heart-mid';
         }
         if(unit.fatalWounds > 0) {
           healthIcon = 'critical';
-          healthClass = 'pulse';
+          healthCritical = true;
         }
         if(unit.health <= 0) {
           unitDom.classList.add('dead');
           healthIcon = 'death';
-          healthClass = '';
+          healthCritical = false;
         }
-        if(healthClass) {
-          healthImg.classList.add(healthClass);          
+        if(healthCritical) {
+          healthImg.classList.add('pulse');          
+        } else {
+          healthImg.classList.remove('pulse');
         }
         healthImg.setAttribute('src', `/assets/${healthIcon}.svg`);
 
@@ -520,7 +525,6 @@
         let userStatsContent = document.getElementById('user-stats_content');
         userStatsContent.innerHTML = '';
 
-        for(var i = 0; i < 6; i++) {
           sorted.forEach((s) => {
           userStatsContent.innerHTML += `
 <div class="stats_row">
@@ -529,7 +533,6 @@
 </div>
           `;
         });
-        }
         
       }
     </script>
