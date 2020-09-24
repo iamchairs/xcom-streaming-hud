@@ -1,208 +1,331 @@
-state: battle
-selectedUnit: Iucihi Koha
-units:
-  - name: Janka Bodnar
-    id: 1
-    armorType: STR_NONE_UC
-    timeUnits: 23
-    energy: 50
-    health: 27
-    baseHealth: 34
-    morale: 46
-    fatalWounds: 0
-    fire: 0
-    rank: STR_ROOKIE
-    killedBy: 0
-    rankInt: 0
-  - name: Iucihi Koha
-    id: 4
-    armorType: STR_NONE_UC
-    timeUnits: 57
-    energy: 48
-    health: 38
-    baseHealth: 38
-    morale: 64
-    fatalWounds: 0
-    fire: 0
-    rank: STR_ROOKIE
-    killedBy: 0
-    rankInt: 0
-  - name: Lubomir Cyprich
-    id: 5
-    armorType: STR_NONE_UC
-    timeUnits: 58
-    energy: 40
-    health: 0
-    baseHealth: 30
-    morale: 82
-    fatalWounds: 2
-    fire: 0
-    rank: STR_ROOKIE
-    killedBy: 1
-    rankInt: 0
-  - name: Marcelo Assis
-    id: 6
-    armorType: STR_NONE_UC
-    timeUnits: 55
-    energy: 55
-    health: 0
-    baseHealth: 36
-    morale: 81
-    fatalWounds: 1
-    fire: 0
-    rank: STR_ROOKIE
-    killedBy: 1
-    rankInt: 0
-  - name: Pinksalmonz
-    id: 8
-    armorType: STR_NONE_UC
-    timeUnits: 51
-    energy: 38
-    health: 0
-    baseHealth: 36
-    morale: 70
-    fatalWounds: 3
-    fire: 0
-    rank: STR_ROOKIE
-    killedBy: 1
-    rankInt: 0
-  - name: Heketoro Warena
-    id: 14
-    armorType: STR_NONE_UC
-    timeUnits: 40
-    energy: 30
-    health: 40
-    baseHealth: 40
-    morale: 58
-    fatalWounds: 0
-    fire: 0
-    rank: STR_SQUADDIE
-    killedBy: 0
-    rankInt: 1
-  - name: Olof Lindqvist
-    id: 9
-    armorType: STR_NONE_UC
-    timeUnits: 28
-    energy: 38
-    health: 31
-    baseHealth: 31
-    morale: 46
-    fatalWounds: 0
-    fire: 0
-    rank: STR_SQUADDIE
-    killedBy: 0
-    rankInt: 1
-  - name: Electricalskateboard
-    id: 11
-    armorType: STR_NONE_UC
-    timeUnits: 57
-    energy: 47
-    health: 37
-    baseHealth: 37
-    morale: 46
-    fatalWounds: 0
-    fire: 0
-    rank: STR_SQUADDIE
-    killedBy: 0
-    rankInt: 1
-  - name: Zatary2
-    id: 2
-    armorType: STR_NONE_UC
-    timeUnits: 64
-    energy: 66
-    health: 36
-    baseHealth: 36
-    morale: 46
-    fatalWounds: 0
-    fire: 0
-    rank: STR_SERGEANT
-    killedBy: 0
-    rankInt: 2
-  - name: Chloerose2000
-    id: 13
-    armorType: STR_NONE_UC
-    timeUnits: 51
-    energy: 52
-    health: 32
-    baseHealth: 32
-    morale: 70
-    fatalWounds: 0
-    fire: 0
-    rank: STR_SERGEANT
-    killedBy: 0
-    rankInt: 2
+state: geo
 difficulty: 4
-funds: 936189
+funds: 2405569
 warned: false
-month: 0
+month: 4
 soldiers:
-  - name: Electricalskateboard
+  - name: Rashid Mustafa
     rank: STR_ROOKIE
     kills: 0
     missions: 1
     dead: true
-  - name: Om Misra
-    rank: STR_ROOKIE
-    kills: 1
-    missions: 1
-    dead: true
-  - name: Frands Kristensen
-    rank: STR_ROOKIE
-    kills: 1
-    missions: 1
-    dead: true
-  - name: Emma Willems
+  - name: Isao Watanabe
     rank: STR_ROOKIE
     kills: 0
-    missions: 1
+    missions: 2
     dead: true
-  - name: Lubomir Cyprich
+  - name: Jaime Reis
     rank: STR_ROOKIE
     kills: 0
-    missions: 1
+    missions: 2
     dead: true
-  - name: Marcelo Assis
+  - name: Dora Reyes
     rank: STR_ROOKIE
     kills: 0
-    missions: 1
+    missions: 2
     dead: true
-  - name: Pinksalmonz
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 1
-    dead: true
-  - name: Janka Bodnar
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 1
-    dead: false
-  - name: Iucihi Koha
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 1
-    dead: false
-  - name: Heketoro Warena
-    rank: STR_SQUADDIE
-    kills: 2
-    missions: 1
-    dead: false
-  - name: Olof Lindqvist
-    rank: STR_SQUADDIE
-    kills: 1
-    missions: 1
-    dead: false
-  - name: Electricalskateboard
-    rank: STR_SQUADDIE
-    kills: 1
-    missions: 1
-    dead: false
-  - name: Zatary2
-    rank: STR_SERGEANT
-    kills: 2
-    missions: 1
-    dead: false
-  - name: Chloerose2000
+  - name: Bastien Lambert
     rank: STR_SERGEANT
     kills: 1
+    missions: 2
+    dead: true
+  - name: Hye-jin Son
+    rank: STR_ROOKIE
+    kills: 1
     missions: 1
+    dead: true
+  - name: Antal Csonka
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Hanna Farago
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Esko Halonen
+    rank: STR_SQUADDIE
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Marius Petre
+    rank: STR_SQUADDIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Mauro Perez
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Lubos Krejci
+    rank: STR_CAPTAIN
+    kills: 3
+    missions: 4
+    dead: true
+  - name: Grigoriy Fedorov
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 3
+    dead: true
+  - name: Kobe Vermeulen
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 3
+    dead: true
+  - name: Sanjiv Roy
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Jef Simon
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Soo Deshi
+    rank: STR_SERGEANT
+    kills: 2
+    missions: 6
+    dead: true
+  - name: Kanak Acharya
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Jacqueline Dupuis
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 2
+    dead: true
+  - name: Aydemir Kalender
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Anabela Nunes
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 7
+    dead: true
+  - name: Gerrit van den Broek
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Gennadiy Makarov
+    rank: STR_SERGEANT
+    kills: 4
+    missions: 4
+    dead: true
+  - name: Kai Schroeder
+    rank: STR_CAPTAIN
+    kills: 11
+    missions: 7
+    dead: true
+  - name: Lucas Ortega
+    rank: STR_SQUADDIE
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Ihimaera Honetana
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Kalinda Singh
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Mateo Miranda
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Dabir Gebra Hana
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 1
+    dead: true
+  - name: Amadi Opara
+    rank: STR_SERGEANT
+    kills: 4
+    missions: 2
+    dead: true
+  - name: Rachel Farrell
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Ibrahim Ibrahim
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Tomas Rakocz
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Vratko Haluska
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Iehohapata Henare
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Johan Dekker
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Carmine Bianchi
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Peter de Graaf
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Jing Chen
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Gytha Hviid
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Victor Peeters
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Vasil Iliev
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Dabir Ahadu
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Theociymenus Makrigiannis
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Pierre Lejeune
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Leonardo Fernandez
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Gerard de Boer
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Branislav Mikus
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Maile Kiwara
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Ralf Zimmermann
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Esko Karppinen
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Olof Sundqvist
+    rank: STR_SERGEANT
+    kills: 5
+    missions: 3
+    dead: false
+  - name: Filippo Rinaldi
+    rank: STR_SERGEANT
+    kills: 11
+    missions: 5
+    dead: false
+  - name: Ji-hye Bong
+    rank: STR_SERGEANT
+    kills: 6
+    missions: 4
+    dead: false
+  - name: Vihaan Tendulkar
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 8
+    dead: false
+  - name: Clara Moura
+    rank: STR_SERGEANT
+    kills: 6
+    missions: 3
+    dead: false
+  - name: Maria Rusova
+    rank: STR_CAPTAIN
+    kills: 6
+    missions: 3
+    dead: false
+  - name: Patrick Marshall
+    rank: STR_CAPTAIN
+    kills: 9
+    missions: 8
+    dead: false
+  - name: Constantin Parvu
+    rank: STR_COLONEL
+    kills: 4
+    missions: 7
+    dead: false
+  - name: Ctibor Kolnik
+    rank: STR_COMMANDER
+    kills: 5
+    missions: 9
+    dead: false
+  - name: Ebru Olcay
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Jeanne Heroin
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Cormac Campbell
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: James Lynch
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Lecia Kjolbye
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
     dead: false
