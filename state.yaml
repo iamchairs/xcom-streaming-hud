@@ -1,8 +1,8 @@
 state: geo
 difficulty: 4
-funds: 2405569
+funds: 2961646
 warned: false
-month: 4
+month: 8
 soldiers:
   - name: Rashid Mustafa
     rank: STR_ROOKIE
@@ -154,178 +154,243 @@ soldiers:
     kills: 4
     missions: 2
     dead: true
-  - name: Rachel Farrell
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Ibrahim Ibrahim
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Tomas Rakocz
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Vratko Haluska
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Iehohapata Henare
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Johan Dekker
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Carmine Bianchi
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Peter de Graaf
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Jing Chen
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Gytha Hviid
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Victor Peeters
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Vasil Iliev
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Dabir Ahadu
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Theociymenus Makrigiannis
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Pierre Lejeune
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Leonardo Fernandez
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Gerard de Boer
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Branislav Mikus
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Maile Kiwara
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Ralf Zimmermann
-    rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
   - name: Esko Karppinen
     rank: STR_ROOKIE
     kills: 0
-    missions: 0
-    dead: false
-  - name: Olof Sundqvist
-    rank: STR_SERGEANT
-    kills: 5
-    missions: 3
-    dead: false
-  - name: Filippo Rinaldi
-    rank: STR_SERGEANT
-    kills: 11
-    missions: 5
-    dead: false
-  - name: Ji-hye Bong
-    rank: STR_SERGEANT
-    kills: 6
-    missions: 4
-    dead: false
-  - name: Vihaan Tendulkar
-    rank: STR_SERGEANT
-    kills: 3
-    missions: 8
-    dead: false
+    missions: 1
+    dead: true
   - name: Clara Moura
     rank: STR_SERGEANT
     kills: 6
-    missions: 3
-    dead: false
-  - name: Maria Rusova
-    rank: STR_CAPTAIN
+    missions: 4
+    dead: true
+  - name: Branislav Mikus
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Ralf Zimmermann
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Olof Sundqvist
+    rank: STR_SERGEANT
+    kills: 7
+    missions: 4
+    dead: true
+  - name: Filippo Rinaldi
+    rank: STR_SERGEANT
+    kills: 14
+    missions: 6
+    dead: true
+  - name: Gerard de Boer
+    rank: STR_ROOKIE
     kills: 6
+    missions: 1
+    dead: true
+  - name: Gytha Hviid
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: true
+  - name: Leonardo Fernandez
+    rank: STR_ROOKIE
+    kills: 3
+    missions: 1
+    dead: true
+  - name: Ji-hye Bong
+    rank: STR_SERGEANT
+    kills: 10
+    missions: 6
+    dead: true
+  - name: Carmine Bianchi
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Vasil Iliev
+    rank: STR_SQUADDIE
+    kills: 8
     missions: 3
-    dead: false
-  - name: Patrick Marshall
-    rank: STR_CAPTAIN
-    kills: 9
-    missions: 8
-    dead: false
+    dead: true
   - name: Constantin Parvu
     rank: STR_COLONEL
-    kills: 4
-    missions: 7
-    dead: false
+    kills: 11
+    missions: 11
+    dead: true
   - name: Ctibor Kolnik
     rank: STR_COMMANDER
-    kills: 5
-    missions: 9
-    dead: false
-  - name: Ebru Olcay
+    kills: 7
+    missions: 14
+    dead: true
+  - name: Tomas Rakocz
     rank: STR_ROOKIE
     kills: 0
-    missions: 0
-    dead: false
-  - name: Jeanne Heroin
+    missions: 1
+    dead: true
+  - name: Peter de Graaf
+    rank: STR_SERGEANT
+    kills: 4
+    missions: 3
+    dead: true
+  - name: Vratko Haluska
     rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
-  - name: Cormac Campbell
+    kills: 2
+    missions: 1
+    dead: true
+  - name: Johan Dekker
     rank: STR_ROOKIE
-    kills: 0
-    missions: 0
-    dead: false
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Theociymenus Makrigiannis
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 4
+    dead: true
+  - name: pejung666
+    rank: STR_SERGEANT
+    kills: 3
+    missions: 3
+    dead: true
+  - name: Alizonnwm
+    rank: STR_SERGEANT
+    kills: 4
+    missions: 5
+    dead: true
+  - name: Vihaan Tendulkar
+    rank: STR_CAPTAIN
+    kills: 10
+    missions: 13
+    dead: true
   - name: James Lynch
     rank: STR_ROOKIE
     kills: 0
-    missions: 0
-    dead: false
+    missions: 2
+    dead: true
+  - name: Jillian Salomon
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Jeanne Heroin
+    rank: STR_SQUADDIE
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Ibrahim Ibrahim
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 2
+    dead: true
+  - name: Ebru Olcay
+    rank: STR_ROOKIE
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Rachel Farrell
+    rank: STR_SQUADDIE
+    kills: 2
+    missions: 2
+    dead: true
+  - name: Adrian Orosz
+    rank: STR_SERGEANT
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Victor Peeters
+    rank: STR_CAPTAIN
+    kills: 7
+    missions: 6
+    dead: true
+  - name: Iehohapata Henare
+    rank: STR_SERGEANT
+    kills: 0
+    missions: 4
+    dead: true
   - name: Lecia Kjolbye
     rank: STR_ROOKIE
     kills: 0
+    missions: 2
+    dead: true
+  - name: Cormac Campbell
+    rank: STR_SERGEANT
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Jing Chen
+    rank: STR_SERGEANT
+    kills: 1
+    missions: 2
+    dead: true
+  - name: Kamili Kariuki
+    rank: STR_ROOKIE
+    kills: 0
     missions: 0
+    dead: false
+  - name: Hatfacoa Heretini
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Haavard Hopen
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Michael Schulz
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Katarzyna Michalska
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Jorgen Selle
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Marcin Piotrowski
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Lai Huik'o
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Pal Supola
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Annie van Leeuwen
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 0
+    dead: false
+  - name: Sourav Malhotra
+    rank: STR_ROOKIE
+    kills: 0
+    missions: 1
+    dead: false
+  - name: Dabir Ahadu
+    rank: STR_SERGEANT
+    kills: 6
+    missions: 6
+    dead: false
+  - name: pejung666
+    rank: STR_CAPTAIN
+    kills: 11
+    missions: 13
+    dead: false
+  - name: Alizonnwm
+    rank: STR_COLONEL
+    kills: 9
+    missions: 9
     dead: false

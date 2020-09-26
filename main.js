@@ -12,14 +12,16 @@ var fs = require('fs');
 let state = null;
 let doc = null;
 setInterval(() => {
-  let newState = fs.readFileSync('./state.yaml', 'utf8');
-  if(newState !== state) {
-    state = newState;
-
-    doc = yaml.load(state);
-    io.emit('broadcast', doc);
-    console.log('broadcasted');
-  }
+  try {
+    let newState = fs.readFileSync('./state.yaml', 'utf8');
+    if(newState !== state) {
+      state = newState;
+  
+      doc = yaml.load(state);
+      io.emit('broadcast', doc);
+      console.log('broadcasted');
+    }
+  } catch(e) {}
 }, 10);
 
 io.on('connect', (client) => {
